@@ -16,7 +16,7 @@ namespace Uppdrag_3_v3
             Name = name;
 
         }
-        public void Manage()
+        public void Manage() //Hanterar bilar
         {
             Console.WriteLine("Welcome, here you can see the staff available");
 
