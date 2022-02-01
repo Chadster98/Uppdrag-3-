@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Uppdrag_3_v3
 {
@@ -14,7 +10,7 @@ namespace Uppdrag_3_v3
         }
         public string _lastName { get; set; }
         public Car _Car { get; set; }
-        
+        //Registrera köpare
         public void Register()
         {
             Console.WriteLine("Please input your information\n");

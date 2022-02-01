@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+
 
 namespace Uppdrag_3_v3
 {
@@ -16,9 +16,10 @@ namespace Uppdrag_3_v3
             Name = name;
 
         }
-        public void Manage() //Hanterar bilar
+        public void Manage() //Metod som hanterar menyvalet för hantera personal
         {
-            Console.WriteLine("Welcome, here you can see the staff available");
+            Console.WriteLine("Welcome, here you can see the staff available\n");
+            
 
             foreach (string i in staff)
             {
@@ -48,15 +49,15 @@ namespace Uppdrag_3_v3
 
 
 
-            }
+            }//Lägger till en anställd
             void Add(string name)
             {
                 staff.Add(name);
             }
-
+            //Tar bort en anställd
             void Kick(string name)
             {                
-                staff.RemoveAll(x => x == name); //Ta bort anställd som har namnet användaren valt att skriva in 
+                staff.RemoveAll(x => x == name); 
             }
 
         }
