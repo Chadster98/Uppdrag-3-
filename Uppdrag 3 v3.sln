@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppdrag 3 v3", "Uppdrag 3 v3\Uppdrag 3 v3.csproj", "{F1F5F243-02E3-4C06-8B55-15A39C1B18E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppdrag 3 Bilfirman", "Uppdrag 3 v3\Uppdrag 3 Bilfirman.csproj", "{F1F5F243-02E3-4C06-8B55-15A39C1B18E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

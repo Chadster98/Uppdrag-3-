@@ -2,7 +2,7 @@
 
 
 
-namespace Uppdrag_3_v3
+namespace Uppdrag_3_Bilfirman
 {
     public class Program
     {
@@ -15,78 +15,84 @@ namespace Uppdrag_3_v3
         {
             //Skapar variabler av de typ instanser jag behöver 
             Staff staff = new Staff("");
-            Car car = new Car("", "");
-            car.IntializeCars();
             Buyer buyer = new Buyer();
+            Car car = new Car("", "", 0, 0, 0);
             
-            string[] menuoptions = new string[] { "1. Register buyer of car ", "2. Manage cars ", "3. Manage the staff ", "4. Extended Services ", "5. Exit " };
-            int MenuSelect = 0;
+            car.IntializeCars();//Hämtar bilar som lagts in manuellt.
+            
+            
+            string[] menuOptions = new string[] { "1. Register buyer of car ", "2. Manage cars ", "3. Manage the staff ", "4. Extended Services ", "5. Exit " };
+            int menuSelect = 0;
+            
             //Medans while är sann körs menyerna nedan
             while (true)
             {
                 Console.Clear();
                 Console.CursorVisible = false;
-                if (MenuSelect == 0)
+                if (menuSelect == 0)
                 {                   
-                    Console.WriteLine("1. Register buyer of car" + "<-");
+                    Console.WriteLine("1. Register buyer of car" + " <-");
                     Console.WriteLine("2. Manage cars ");
                     Console.WriteLine("3. Manage the staff");
                     Console.WriteLine("4. Extended Services");
                     Console.WriteLine("5. Exit the menu!");
                     Console.ReadKey();
                 }
-                else if (MenuSelect == 1)
+                else if (menuSelect == 1)
                 {                    
                     Console.WriteLine("1. Register buyer of car");
-                    Console.WriteLine("2. Manage cars " + "<-");
+                    Console.WriteLine("2. Manage cars " + " <-");
                     Console.WriteLine("3. Manage the staff");
                     Console.WriteLine("4. Extended Services");
                     Console.WriteLine("5. Exit the menu!");
                     Console.ReadKey();
 
                 }
-                else if (MenuSelect == 2)
+                else if (menuSelect == 2)
                 {                    
                     Console.WriteLine("1. Register buyer of car");
                     Console.WriteLine("2. Manage cars ");
-                    Console.WriteLine("3. Manage the staff" + "<-");
+                    Console.WriteLine("3. Manage the staff" + " <-");
                     Console.WriteLine("4. Extended Services");
                     Console.WriteLine("5. Exit the menu!");
                     Console.ReadKey();
 
                 }
-                else if (MenuSelect == 3)
+                else if (menuSelect == 3)
                 {                   
                     Console.WriteLine("1. Register buyer of car");
                     Console.WriteLine("2. Manage cars ");
                     Console.WriteLine("3. Manage the staff");
-                    Console.WriteLine("4. Extended Services" + "<-");
+                    Console.WriteLine("4. Extended Services" + " <-");
                     Console.WriteLine("5. Exit the menu!");
                     Console.ReadKey();
                 }
-                else if (MenuSelect == 4)
+                else if (menuSelect == 4)
                 {                    
                     Console.WriteLine("1. Register buyer of car");
                     Console.WriteLine("2. Manage cars ");
                     Console.WriteLine("3. Manage the staff");
                     Console.WriteLine("4. Extended Services");
-                    Console.WriteLine("5. Exit the menu!" + "<-");
+                    Console.WriteLine("5. Exit the menu!" + " <-");
                     Console.ReadKey();
                 }
                 var KeyPressed = Console.ReadKey();
+                
                 //Kollar användarens tryckning och att hen inte går utanför menyn.
-                if (KeyPressed.Key == ConsoleKey.DownArrow && MenuSelect != menuoptions.Length - 1)
+                if (KeyPressed.Key == ConsoleKey.DownArrow && menuSelect != menuOptions.Length - 1)
                 {
-                    MenuSelect++;
+                    menuSelect++;
                 }
 
-                else if (KeyPressed.Key == ConsoleKey.UpArrow && MenuSelect >= 1)
+                else if (KeyPressed.Key == ConsoleKey.UpArrow && menuSelect >= 1)
                 {
-                    MenuSelect--;
-                }//Läser in användarens val alternativ
+                    menuSelect--;
+                }
+                
+                //Läser in användarens val alternativ
                 else if (KeyPressed.Key == ConsoleKey.Enter)
                 {
-                    switch (MenuSelect)
+                    switch (menuSelect)
                     {
                         case 0:
                             buyer.Register();

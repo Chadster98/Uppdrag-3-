@@ -1,15 +1,13 @@
 ﻿using System;
 
-namespace Uppdrag_3_v3
+namespace Uppdrag_3_Bilfirman
 {
     public class Buyer
     {
-        public string _firstName
-        {
-            get; set;
-        }
+        public string _firstName{ get; set; }
         public string _lastName { get; set; }
         public Car _Car { get; set; }
+        
         //Registrera köpare
         public void Register()
         {

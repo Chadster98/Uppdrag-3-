@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace Uppdrag_3_v3
+namespace Uppdrag_3_Bilfirman
 {
 
     public class Staff
@@ -10,12 +10,14 @@ namespace Uppdrag_3_v3
         public string Name { get; set; }
 
         List<string> staff = new List<string>() { "Henrik", "Patrik", "Karl", "Pernilla" };
+        
         public Staff(string name)
         {
 
             Name = name;
 
         }
+        
         public void Manage() //Metod som hanterar menyvalet för hantera personal
         {
             Console.WriteLine("Welcome, here you can see the staff available\n");
@@ -30,6 +32,8 @@ namespace Uppdrag_3_v3
             Console.WriteLine("1. Hire Employee");
             Console.WriteLine("2. Kick Employee ");
             Console.WriteLine("3. Return to Main Menu");
+
+            Console.WriteLine("Write a number followed by pressing Enter");
             string input = Console.ReadLine();
             switch (input)
             {
@@ -49,12 +53,15 @@ namespace Uppdrag_3_v3
 
 
 
-            }//Lägger till en anställd
+            }
+            
+            //Metod som lägger till en anställd
             void Add(string name)
             {
                 staff.Add(name);
             }
-            //Tar bort en anställd
+
+            //Med som tar bort en anställd
             void Kick(string name)
             {                
                 staff.RemoveAll(x => x == name); 
